@@ -9,3 +9,10 @@ eureka:
       defaultZone: http://localhost:8080/eureka/
   instance:
     preferIpAddress: true
+
+zuul:
+  routes:
+    ui-service:
+      path: /**
+      serviceId: ui-service
+      stripPrefix: true
