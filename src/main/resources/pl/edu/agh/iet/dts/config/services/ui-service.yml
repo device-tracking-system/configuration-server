@@ -1,6 +1,10 @@
 server:
   port: 8081
 
+spring:
+  resources:
+    staticLocations: classpath:pl/edu/agh/iet/dts/ui/static/
+
 eureka:
   client:
     registerWithEureka: true
