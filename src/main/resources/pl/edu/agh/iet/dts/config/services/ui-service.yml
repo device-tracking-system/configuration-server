@@ -26,3 +26,7 @@ messaging:
   aggregatedDataReceiver:
     exchangeName: dts-data
     queueName: dts-data-queue
+
+scheduler:
+  threads:
+    poolSize: 5
