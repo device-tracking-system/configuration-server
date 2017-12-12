@@ -19,6 +19,14 @@ eureka:
   instance:
     preferIpAddress: true
 
+messaging:
+  aggregationTaskSender:
+    exchangeName: dts-tasks
+    queueName: dts-tasks-queue
+  aggregatedDataReceiver:
+    exchangeName: dts-data
+    queueName: dts-data-queue
+
 scheduler:
   threads:
     poolSize: 5
