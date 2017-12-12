@@ -4,6 +4,11 @@ server:
 spring:
   resources:
     staticLocations: classpath:pl/edu/agh/iet/dts/ui/static/
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: devices-tracking-system
 
 eureka:
   client:
@@ -13,3 +18,15 @@ eureka:
       defaultZone: http://localhost:8080/eureka/
   instance:
     preferIpAddress: true
+
+messaging:
+  aggregationTaskSender:
+    exchangeName: dts-tasks
+    queueName: dts-tasks-queue
+  aggregatedDataReceiver:
+    exchangeName: dts-data
+    queueName: dts-data-queue
+
+scheduler:
+  threads:
+    poolSize: 5

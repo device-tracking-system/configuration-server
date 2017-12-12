@@ -30,3 +30,8 @@ security:
     resource:
       userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
       preferTokenInfo: true
+
+messaging:
+  gpsEventsSender:
+    exchangeName: dts-events
+    queueName: dts-events-queue
