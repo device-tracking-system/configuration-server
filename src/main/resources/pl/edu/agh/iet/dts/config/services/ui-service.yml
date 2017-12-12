@@ -4,6 +4,11 @@ server:
 spring:
   resources:
     staticLocations: classpath:pl/edu/agh/iet/dts/ui/static/
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: devices-tracking-system
 
 eureka:
   client:
