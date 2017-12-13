@@ -34,5 +34,6 @@ security:
 
 messaging:
   gpsEventsSender:
-    exchangeName: dts-events
-    queueName: dts-events-queue
+    exchangeName: mobile
+    bindingName: track
+    queueName: mobile.track
