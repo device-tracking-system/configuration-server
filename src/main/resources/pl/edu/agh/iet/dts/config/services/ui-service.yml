@@ -8,7 +8,7 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: devices-tracking-system
+      database: uiService
 
 eureka:
   client:
@@ -21,11 +21,13 @@ eureka:
 
 messaging:
   aggregationTaskSender:
-    exchangeName: dts-tasks
-    queueName: dts-tasks-queue
+    exchangeName: web
+    bindingName: task
+    queueName: web.task
   aggregatedDataReceiver:
-    exchangeName: dts-data
-    queueName: dts-data-queue
+    exchangeName: web
+    bindingName: aggregated
+    queueName: web.aggregated
 
 scheduler:
   threads:
