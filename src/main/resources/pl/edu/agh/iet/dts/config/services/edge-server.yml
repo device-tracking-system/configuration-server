@@ -11,7 +11,7 @@ eureka:
     preferIpAddress: true
 
 zuul:
-  ignoredPatterns: /me
+  ignoredPatterns: /me, /events**
   routes:
     ui-service:
       path: /**
