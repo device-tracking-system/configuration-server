@@ -22,3 +22,16 @@ mvn install
 ```
 java -jar target/configuration-server-1.0-SNAPSHOT.jar --spring.config.location=classpath:pl/edu/agh/iet/dts/config/
 ```
+
+## Building the Docker image
+When the `*.jar` file is successfully built, a Docker image for the production environment may be created by applying
+following steps:
+  1. Enter the root directory of this repository.
+  2. Build the Docker image by typing:
+```
+docker build . -t configuration-server
+```
+  3. In order to run the image, type:
+```
+docker run -p 8888:8888 -t configuration-server
+```
