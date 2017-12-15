@@ -4,10 +4,10 @@ server:
 spring:
   resources:
     staticLocations: classpath:pl/edu/agh/iet/dts/ui/static/
+
   data:
     mongodb:
-      host: localhost
-      port: 27017
+      uri: mongodb://localhost:27017/test
       database: uiService
 
 eureka:
@@ -32,3 +32,39 @@ messaging:
 scheduler:
   threads:
     poolSize: 5
+
+
+---
+spring:
+  profiles: production
+
+  data:
+    mongodb:
+      uri: mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/test
+
+  rabbitmq:
+    host: 10.24.2.5
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.27.245.43:8080/eureka/
+
+
+---
+spring:
+  profiles: test
+
+  data:
+    mongodb:
+      database: uiService-test
+
+messaging:
+  aggregationTaskSender:
+    exchangeName: webTest
+    bindingName: taskTest
+    queueName: webTest.taskTest
+  aggregatedDataReceiver:
+    exchangeName: webTest
+    bindingName: aggregatedTest
+    queueName: webTest.aggregatedTest

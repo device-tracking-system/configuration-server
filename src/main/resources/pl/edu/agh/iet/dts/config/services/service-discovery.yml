@@ -7,3 +7,13 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
+
+
+---
+spring:
+  profiles: production
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.27.245.43:8080/eureka/
