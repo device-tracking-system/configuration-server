@@ -7,7 +7,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/test
+      host: localhost
       database: uiService
 
 eureka:
@@ -40,7 +40,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/test
+      host: 104.155.47.22
 
   rabbitmq:
     host: 10.24.2.5
