@@ -68,3 +68,12 @@ messaging:
     exchangeName: webTest
     bindingName: aggregatedTest
     queueName: webTest.aggregatedTest
+
+
+---
+spring:
+  profiles: debug
+
+logging:
+  level:
+    pl.edu.agh.iet.dts: DEBUG

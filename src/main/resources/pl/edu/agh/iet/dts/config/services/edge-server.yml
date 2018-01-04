@@ -61,3 +61,12 @@ messaging:
     exchangeName: mobileTest
     bindingName: trackTest
     queueName: mobileTest.trackTest
+
+
+---
+spring:
+  profiles: debug
+
+logging:
+  level:
+    pl.edu.agh.iet.dts: DEBUG
