@@ -33,5 +33,9 @@ docker build . -t configuration-server
 ```
   3. In order to run the image, type:
 ```
-docker run -p 8888:8888 -t configuration-server
+docker run -p 8888:8888 -p 44331:44321 -p 44333:44323 -t configuration-server
 ```
+Please note that this docker container uses the Performance Co-Pilot (PCP) tool to gather data for system monitoring
+metrics. These values are accessed via the `44331` and `44333` ports. In order to visualize performance of this
+microservice, please enter the `[CONTAINER IP ADDRESS]:44333` value in the `Hostname` field placed in the Netflix Vector
+dashboard.
