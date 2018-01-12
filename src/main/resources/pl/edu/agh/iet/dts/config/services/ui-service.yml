@@ -10,6 +10,17 @@ spring:
       host: localhost
       database: uiService
 
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    baseUrl: http://localhost:9091/
+    locator:
+      discovery:
+        enabled: true
+    sender:
+      type: web
+
 eureka:
   client:
     registerWithEureka: true
