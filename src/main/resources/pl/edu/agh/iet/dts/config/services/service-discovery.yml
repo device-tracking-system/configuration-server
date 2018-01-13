@@ -2,6 +2,8 @@ server:
   port: 8080
 
 eureka:
+  instance:
+     hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -14,6 +16,8 @@ spring:
   profiles: production
 
 eureka:
+  instance:
+    hostname: ${EUREKA_IP}
   client:
     serviceUrl:
-      defaultZone: http://10.27.245.43:8080/eureka/
+      defaultZone: http://${EUREKA_IP}:8080/eureka/

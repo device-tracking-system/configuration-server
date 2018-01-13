@@ -51,15 +51,18 @@ spring:
 
   data:
     mongodb:
-      host: 104.155.47.22
+      host: ${MONGODB_IP}
 
   rabbitmq:
-    host: 10.24.2.5
+    host: ${RABBITMQ_IP}
+
+  zipkin:
+    baseUrl: http://${ZIPKIN_IP}:9091/
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://10.27.245.43:8080/eureka/
+      defaultZone: http://${EUREKA_IP}:8080/eureka/
 
 
 ---
